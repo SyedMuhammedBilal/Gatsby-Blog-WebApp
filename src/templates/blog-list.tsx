@@ -30,14 +30,15 @@ type Data = {
       }
     }[]
   }
-}
+};
 
 const BlogIndex = ({
   data,
   location,
   pageContext,
 }: PageProps<Data, PageContext>) => {
-  const siteTitle = data.site.siteMetadata.title
+  const siteTitle = data.allMarkdownRemark.edges.node
+  console.log(siteTitle)
   const posts = data.allMarkdownRemark.edges
   const { currentPage, numPages } = pageContext
 
@@ -129,7 +130,6 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
-            description
           }
         }
       }
