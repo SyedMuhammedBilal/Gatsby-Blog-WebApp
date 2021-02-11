@@ -44,10 +44,6 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          `gatsby-remark-prismjs`,
-          `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`,
-          'gatsby-remark-embed-url',
           {
             resolve: "gatsby-remark-embed-gist",
             options: {
@@ -57,7 +53,11 @@ module.exports = {
               gistCssPreload: true || false,
 
             }
-          }
+          },
+          `gatsby-remark-prismjs`,
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-smartypants`,
+          'gatsby-remark-embed-url',
         ],
       },
     },

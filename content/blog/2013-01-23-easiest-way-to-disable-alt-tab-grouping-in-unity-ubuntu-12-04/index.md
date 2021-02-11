@@ -9,4 +9,5 @@ I see constant questions on how to disable this and most of it involved installi
 
 Well, this is an automated script to enable the same - you can even use this if you are doing automated deployment.
 
-\[gist https://gist.github.com/4603960 /\]
+`gist:sandys/4603960#disable_alt_tab_grouping_ubuntu.sh`
+`gist:sandys/4603960#other_conf.sh`
