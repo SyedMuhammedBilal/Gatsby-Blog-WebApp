@@ -18,7 +18,7 @@ Wordpress2016.overrideThemeStyles = () => {
       background: "var(--hr)",
     },
   }
-}
+};
 
 delete Wordpress2016.googleFonts
 
