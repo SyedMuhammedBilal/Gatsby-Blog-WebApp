@@ -47,6 +47,17 @@ module.exports = {
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
+          'gatsby-remark-embed-url',
+          {
+            resolve: "gatsby-remark-embed-gist",
+            options: {
+              username: "sandys",
+              includeDefaultCss: true || false,
+              gistDefaultCssInclude: true || false,
+              gistCssPreload: true || false,
+
+            }
+          }
         ],
       },
     },

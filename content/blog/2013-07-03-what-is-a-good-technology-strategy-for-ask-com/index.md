@@ -7,7 +7,7 @@ date: "2013-07-03"
 
 I have been thinking about the recent spate of acquisitions by Yahoo.com and was intrigued by what the other old search portals were doing.
 
-One of the most interesting is Ask.com - it started as a semantic search engine (where you could ask your questions in plain english). As the world soon found out, people hate typing - so when Google innovated with search suggestions (technically known as _typeahead_), it pretty much killed the market for semantic search since - guess what - google suggested reasonably well. Plus it implemented typeahead on a per-word basis.[![Suggestion for just the word "industry"](http://sandeep.files.wordpress.com/2013/07/screenshot-from-2013-07-03-225005.png?w=300)](http://sandeep.files.wordpress.com/2013/07/screenshot-from-2013-07-03-225005.png)
+One of the most interesting is Ask.com - it started as a semantic search engine (where you could ask your questions in plain english). As the world soon found out, people hate typing - so when Google innovated with search suggestions (technically known as _typeahead_), it pretty much killed the market for semantic search since - guess what - google suggested reasonably well. Plus it implemented typeahead on a per-word basis.![Suggestion for just the word "industry"](./images/screenshot-from-2013-07-03-225005.png)
 
 However, for Ask.com that strategy changed a long time ago, when they (rightfully) understood that they could not compete with Google. They then closed down the entire search technology teams and pivoted to a question and answer portal - similar to Quora but without the cultivated community. There is a claim that they use their search technology to power answer to questions - however they have two problems with that:
 

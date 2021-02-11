@@ -11,4 +11,4 @@ The job of this blog is very specific – I intend to propose and define archite
 
 \-Sandeep Srinivasa
 
-\[caption id="attachment\_53" align="alignnone" width="127" caption="Email Address"\]![Email Address](images/328fbdfce20ed8f242f42d8714707ab8.png "328fbdfce20ed8f242f42d8714707ab8")\[/caption\]
+\[caption id="attachment\_53" align="alignnone" width="127" caption="Email Address"\]![Email Address](./images/328fbdfce20ed8f242f42d8714707ab8.png "328fbdfce20ed8f242f42d8714707ab8")\[/caption\]

@@ -10,4 +10,7 @@ tags:
 
 I would'nt suggest you go with the newer Ubuntus - cost 12.04 is supported till 2018.... unless you love playing around with shiny new stuff (which you can do in a VM as well)
 
-\[gist https://gist.github.com/6030823 /\]
+<script src="https://gist.github.com/nisrulz/11c0d63428b108f10c83.js"></script>
+
+
+

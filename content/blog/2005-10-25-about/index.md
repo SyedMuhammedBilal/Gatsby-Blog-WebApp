@@ -17,4 +17,4 @@ Before Atrenta he was alternatively trying to battle panthers at IIT Bombay and 
 
 In his spare time, SSS enjoys Muay Thai, running and World of Warcraft. He recently discovered his love for a PS3
 
-![gmail-address](images/gmail.php.png)
+![gmail-address](./images/gmail.php.png)
