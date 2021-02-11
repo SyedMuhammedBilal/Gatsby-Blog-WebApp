@@ -4,6 +4,7 @@ import { PageProps, Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
+import '../components/global.css'
 
 type PageContext = {
   currentPage: number
@@ -32,24 +33,31 @@ type Data = {
   }
 };
 
+type Style = {
+  fontSize: string
+  fontWeight: string
+}
+
 const BlogIndex = ({
   data,
   location,
   pageContext,
 }: PageProps<Data, PageContext>) => {
   const siteTitle = data.allMarkdownRemark.edges.node
-  console.log(siteTitle)
+  // console.log(siteTitle);
   const posts = data.allMarkdownRemark.edges
   const { currentPage, numPages } = pageContext
 
   const isFirst = currentPage === 1
   const isLast = currentPage === numPages
   const prevPage = currentPage - 1 === 1 ? "/" : `/${currentPage - 1}`
-  const nextPage = `/${currentPage + 1}`
+  const nextPage = `/${currentPage + 1}`;
 
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
+      <h1 className="list-head">Fragments</h1>
+      <div className="fragments fragments-separator"/>
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
@@ -60,11 +68,11 @@ const BlogIndex = ({
                   marginBottom: rhythm(1 / 4),
                 }}
               >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                <Link style={{ boxShadow: `none`, fontWeight: 500, textDecoration: 'underline' }} to={node.fields.slug}>
                   {title}
                 </Link>
               </h3>
-              <small>{node.frontmatter.date}</small>
+              <small className="blog-date"><i>{node.frontmatter.date}</i></small>
             </header>
             <section>
               <p

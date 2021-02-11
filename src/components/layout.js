@@ -86,13 +86,10 @@ const Layout = ({ location, title, children }) => {
         backgroundColor: "var(--bg)",
         color: "var(--textNormal)",
         transition: "color 0.2s ease-out, background 0.2s ease-out",
-        minHeight: "100vh",
       }}
     >
       <div className="sidebar">
         <div
-          className="md:h-screen p-4 flex flex-col justify-center items-center"
-          style={{ minHeight: 200 }}
         >
           {header}
         </div>
@@ -104,6 +101,6 @@ const Layout = ({ location, title, children }) => {
       </div>
     </div>
   )
-}
+};
 
 export default Layout
