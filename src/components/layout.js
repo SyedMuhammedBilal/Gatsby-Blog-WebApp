@@ -97,7 +97,7 @@ const Layout = ({ location, title, children }) => {
 
       <div className="main-content relative">
         <main>{children}</main>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </div>
   )

@@ -33,11 +33,6 @@ type Data = {
   }
 };
 
-type Style = {
-  fontSize: string
-  fontWeight: string
-}
-
 const BlogIndex = ({
   data,
   location,
