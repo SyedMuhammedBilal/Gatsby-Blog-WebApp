@@ -1,6 +1,7 @@
 import React from "react";
 
 const Sidebar = ({ header }) => {
+
   console.log({ header });
   return (
     <div
