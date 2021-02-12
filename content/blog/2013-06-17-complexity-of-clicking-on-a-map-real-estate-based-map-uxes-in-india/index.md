@@ -17,7 +17,7 @@ Remember when I said this problem is not present in the US due to homogeneity in
 
 Take for example Trulia's Android app
 
-[![trulia mobile app touch select](http://sandeep.files.wordpress.com/2013/01/2013-06-01_10-42-30.png?w=168)](http://sandeep.files.wordpress.com/2013/01/2013-06-01_10-42-30.png)
+![trulia mobile app touch select](./images/screenshot-from-2013-06-17-150612.png)
 
 What you see here is an interaction that happens when you touch a particular point on the mobile screen.  The circle (and the list below that corresponds to the radius of the circle) is part of that interaction. Let's analyze the reasons.
 
@@ -27,15 +27,15 @@ However, if you have a large data set (as we had in Proptiger), then you need to
 
 Do note that there is another data interaction possible - something that vaniila google maps does very well. The map is secondary, the list on the left is primary - this means that once people are looking a particular paged set of results on the left, the map does not re-query on any pan/zoom. Now this works well for a _known-item browse_ _behavior_ (in UX design terms), but not for an exploratory map-centric behavior. In the real-estate paradigm, one of the big problems that can occur because of this is seeming empty spaces on the map even when you have zoomed to it because the list is still static. The best way to illustrate this is to look at how Airbnb represents its map results - the fact that you cannot zoom without reloading vs not reloading and having less results is obvious in its "_**Zoom in to see more properties - Redo search in map must be checked to see new results as you move the map**_" aspect. I'm not really sure how usable that is in India.
 
-[![airbnb map UX - reload and zoom](http://sandeep.files.wordpress.com/2013/06/screenshot-from-2013-06-21-170624.png?w=300)](http://sandeep.files.wordpress.com/2013/06/screenshot-from-2013-06-21-170624.png)
+![airbnb map UX - reload and zoom](./images/screenshot-from-2013-06-17-151050.png)
 
 _**Fun**_ _**fact**_: It just so happens that implementing the javascript hooks to work with the panning/zooming and refreshing of data is a very hairy task. This all stems primarily from the [quirky interaction between _fitBounds_ and](http://stackoverflow.com/questions/13777318/set-google-map-zoom-level-after-using-fitbound) _[setZoom](http://stackoverflow.com/questions/13777318/set-google-map-zoom-level-after-using-fitbound)._ 
 
  So what's the solution - put simply it is this: **somehow prevent people from zooming to isolate a data point.** This is a UX problem - you need to somehow give an interaction to people that prevents them from panning and zooming. In my understanding there are two ways to achieve that:
 
-- _Radius of interest_ - draw a small circle **around** the point of interest (regardless of touch and click) and give a separate popup which has a small limited set of results around there. Using this popup, you can zero-in to the exact point of interest. This is what Trulia does in its mobile app and Housing.co.in is starting to do in its desktop app[![Housing.co.in radius of interest](http://sandeep.files.wordpress.com/2013/06/screenshot-from-2013-06-17-150612.png?w=300)](http://sandeep.files.wordpress.com/2013/06/screenshot-from-2013-06-17-150612.png)
+- _Radius of interest_ - draw a small circle **around** the point of interest (regardless of touch and click) and give a separate popup which has a small limited set of results around there. Using this popup, you can zero-in to the exact point of interest. This is what Trulia does in its mobile app and Housing.co.in is starting to do in its desktop app![Housing.co.in radius of interest](./images/screenshot-from-2013-06-17-151102.png)
 - _Spidering_ - It is the same theory as OSX fan of icons (technically called [Stacks](http://support.apple.com/kb/ht3739)). This is something we have attempted at Proptiger. Clicking on a close group of icons spreads it out as a fan allowing you to pick and choose.
 
-[![Map icons - grouped (before)](images/screenshot-from-2013-06-17-151102.png)![map icons spidered view - like stacks](http://sandeep.files.wordpress.com/2013/06/screenshot-from-2013-06-17-151102.png?w=300)](http://sandeep.files.wordpress.com/2013/06/screenshot-from-2013-06-17-151050.png)
-
+![map icons spidered view - like stacks](./images/screenshot-from-2013-06-21-170624.png)
+<!---> [Map icons - grouped (before)](images/screenshot-from-2013-06-17-151102.png) --->
 This is just the first step for building UXes with large amounts of data on a map. Wonder what's the next step ;)

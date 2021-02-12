@@ -89,7 +89,6 @@ const Layout = ({ location, title, children }) => {
         backgroundColor: "var(--bg)",
         color: "var(--textNormal)",
         transition: "color 0.2s ease-out, background 0.2s ease-out",
-        minHeight: "100vh",
       }}
     >
 
@@ -97,7 +96,10 @@ const Layout = ({ location, title, children }) => {
 
       <div className="sidebar">
         <div
+<<<<<<< HEAD
 
+=======
+>>>>>>> 967db3954f29ba32399ccc743afea297b94f1c26
         >
           {header}
           <div className="sidediv" >
@@ -122,11 +124,15 @@ const Layout = ({ location, title, children }) => {
 
       <div className="main-content relative">
         <main>{children}</main>
+<<<<<<< HEAD
 
         <Footer />
+=======
+        {/* <Footer /> */}
+>>>>>>> 967db3954f29ba32399ccc743afea297b94f1c26
       </div>
     </div>
   )
-}
+};
 
 export default Layout

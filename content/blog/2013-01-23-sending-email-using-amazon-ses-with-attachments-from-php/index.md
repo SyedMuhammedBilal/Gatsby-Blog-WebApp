@@ -7,4 +7,4 @@ This script is crazy - there is no known sane example on how to do this, so I ha
 
 This code snippet should help everyone who is trying to put together a way to send email with attachments using SES from PHP.
 
-\[gist  https://gist.github.com/4604187 /\]
+`gist:sandys/4604187#email_attachments_ses_simple.php`

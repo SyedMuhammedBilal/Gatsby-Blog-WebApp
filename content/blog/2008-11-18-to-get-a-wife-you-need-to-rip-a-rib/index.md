@@ -5,7 +5,7 @@ categories:
   - "personal"
 ---
 
-\[caption id="attachment\_179" align="alignleft" width="214" caption="Charu and My invitation"\][![Charu and My invitation](http://sandeep.files.wordpress.com/2008/11/charu-sandeeps-invitation.jpg?w=214 "charu-sandeeps-invitation")](http://sandeep.files.wordpress.com/2008/11/charu-sandeeps-invitation.jpg)\[/caption\]
+\[caption id="attachment\_179" align="alignleft" width="214" caption="Charu and My invitation"\]![Charu and My invitation](./images/charu-sandeeps-invitation.jpg)\[/caption\]
 
 And that's what I found out these past three years, ever since that fateful day at the kickboxing gym. Was it very Christian of me, to adhere so strictly to the Book of Genesis? It sure did hurt ...
 

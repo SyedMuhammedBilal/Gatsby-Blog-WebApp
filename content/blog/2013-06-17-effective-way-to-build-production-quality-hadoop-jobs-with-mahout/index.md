@@ -13,7 +13,10 @@ As I  started working on building usable data analytics with hadoop, I saw that
 
 Hive seemed to be the closest fit to the relational model and so serves as a good starting point. A very [interesting post](http://developer.yahoo.com/blogs/hadoop/comparing-pig-latin-sql-constructing-data-processing-pipelines-444.html) by Alan Gates @Yahoo made me realize that for most of the tasks out there, the big challenge is to take data and massage it to be usable for big data analysis (for example creating Vectors for Mahout's recommenders).
 
-Pig was the next point of experimentation - especially with its ability to work with Jruby UDFs. \[gist https://gist.github.com/5795938 /\]
+Pig was the next point of experimentation - especially with its ability to work with Jruby UDFs. 
+
+`gist:sandys/5795938#1.pig`
+`gist:sandys/5795938#udf.rb`
 
 This runs fine... on your laptop. However, the pig problem happens when you are actually preparing to run this job on a cluster. At that time all the hidden things start to hit you - JARs not being in classpath, JARs not being in the [distributed cache](http://hadoop.apache.org/docs/r1.0.4/api/org/apache/hadoop/filecache/DistributedCache.html) and things start to add up to be a pain. These start impacting you more and more if you are combining more than one toolkit - for example Hadoop + HBase + Mahout.
 

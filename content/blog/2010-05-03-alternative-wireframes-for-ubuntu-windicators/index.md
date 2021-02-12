@@ -19,8 +19,8 @@ It is an interesting concept - now you can see why the window controls had to be
 
 I have an alternative concept - one that does not mess with the brains of ordinary Linux users and still satisfies the basic premise of _windicators._
 
-[![Steady State window](http://sandeep.files.wordpress.com/2010/05/steady_state.png?w=300 "Regular Window")](http://sandeep.files.wordpress.com/2010/05/steady_state.png)
+![Steady State window](./images/calling_attention.png)
 
-[![](http://sandeep.files.wordpress.com/2010/05/calling_attention.png?w=300 "Window is calling for attention - look at the star")](http://sandeep.files.wordpress.com/2010/05/calling_attention.png)
+!["Window is calling for attention - look at the star"](./images/steady_state.png)
 
-[![](images/dropdown.png "User clicks the window controls button to expose events dropdown")](http://sandeep.files.wordpress.com/2010/05/dropdown.png)
+!["User clicks the window controls button to expose events dropdown"](./images/dropdown.png)

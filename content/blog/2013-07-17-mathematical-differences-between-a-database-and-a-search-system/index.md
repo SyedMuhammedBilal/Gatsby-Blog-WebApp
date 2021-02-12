@@ -7,9 +7,9 @@ I get asked this question often - on what is the **actual** difference between 
 
 What is the inherent differences between the two problems - retrieving data and retrieving search results - that require two different software systems. Can we not model a decent search stack using just the database ?
 
-The answer is in the underlying mathematics. Databases work in terms of sets, where each element is a tuple consisting of various fields.
+The answer is in the underlying mathematics. Databases work in terms of sets, where each element is a tuple consisting of various fields
 
-[![set_theory](http://sandeep.files.wordpress.com/2013/07/set_theory.png?w=300)](http://sandeep.files.wordpress.com/2013/07/set_theory.png)
+![Suggestion for just the word "industry"](./images/set_theory.png)
 
 The figure on the left illustrates a join between two tables - an _intersection_ of two sets.
 

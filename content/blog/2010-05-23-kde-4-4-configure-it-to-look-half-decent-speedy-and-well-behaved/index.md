@@ -25,7 +25,7 @@ Optional and cutting edge:
 - Use _[plasma-widget-networkmanagent](http://osdir.com/ml/kubuntu-devel/2010-03/msg00013.html)_ instead of the default Knetworkmanager
 - Drop the default Oxygen/Air theme - it looks like crap and consumes too much CPU. I use _QtCurve_ for widget style, _Shadowport_ for Workspace theme and _Kanzi_ for icons.
 
-\[caption id="attachment\_377" align="aligncenter" width="300" caption="My Desktop"\][![KDE 4.4.3 desktop screenshot](http://sandeep.files.wordpress.com/2010/05/kde1.jpeg?w=300 "KDE 4.4.3 desktop screenshot")](http://sandeep.files.wordpress.com/2010/05/kde1.jpeg)\[/caption\]
+\[caption id="attachment\_377" align="aligncenter" width="300" caption="My Desktop"\]![KDE 4.4.3 desktop screenshot](./images/kde.jpeg)\[/caption\]
 
 Why does KDE still make sense ?
 
