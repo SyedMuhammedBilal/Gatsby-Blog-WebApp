@@ -66,6 +66,9 @@ const BlogIndex = ({
       <SEO title="All posts" />
       <h1 className="list-head">Fragments</h1>
       <div className="fragments fragments-separator" />
+      <br />
+      <p style={{fontSize: '12px', fontWeight: '100'}}>Stream of consciousness notes that don't merit a more dedicated write-up</p>
+      {/* <a style={{fontSize: '12px', fontWeight: 100}}>Atom Feed.</a> */}
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
