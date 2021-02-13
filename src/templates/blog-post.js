@@ -19,7 +19,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <h1 className="list-head" style={{fontSize: '14px', fontWeight: 600}}>Fragments</h1>
+      <h1 className="list-head" style={{fontSize: '14px', fontWeight: 600, letterSpacing: '-1px'}}>Fragments</h1>
       <article>
         <header>
           <h1
