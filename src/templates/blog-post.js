@@ -19,15 +19,21 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
+      <h1 className="list-head" style={{fontSize: '14px', fontWeight: 600}}>Fragments</h1>
       <article>
         <header>
           <h1
             style={{
               marginBottom: 0,
+              fontWeight: 600,
+              letterSpacing: '-2px',
+              fontSize: '3rem'     
             }}
           >
             {post.frontmatter.title}
           </h1>
+          <br />
+            <div className="fragments fragments-separator" />
           <p
             style={{
               ...scale(-1 / 5),
@@ -35,7 +41,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               marginBottom: rhythm(1),
             }}
           >
-            {post.frontmatter.date}
+            {/* {post.frontmatter.date} */}
           </p>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />

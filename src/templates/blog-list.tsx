@@ -59,7 +59,7 @@ const BlogIndex = ({
   //     top: elem,
   //     behavior: 'smooth'
   //   })
-  // };
+  // }
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -70,19 +70,20 @@ const BlogIndex = ({
         const title = node.frontmatter.title || node.fields.slug
         return (
           <React.Fragment>
-            <h2 id={node.frontmatter.Head} style={{fontFamily: 'sans-serif'}}> {node.frontmatter.Head ? node.frontmatter.Head : ''} </h2>
+            <h2 id={node.frontmatter.Head} style={{fontFamily: 'sans-serif',marginBottom: '60px'}}> {node.frontmatter.Head ? node.frontmatter.Head : ''} </h2>
           <article id={node.fields.slug} key={node.fields.slug}>
             <header>
               <h3
                 style={{
-                  marginBottom: rhythm(1 / 4),
+                    marginBottom: rhythm(1 / 4),
+                  marginTop: '-46px'
                 }}
               >
-                <Link style={{ boxShadow: `none`, fontWeight: 500, textDecoration: 'underline' }} to={node.fields.slug}>
+                <Link style={{ boxShadow: `none`, fontWeight: 300, textDecoration: 'underline', fontSize: '21px' }} to={node.fields.slug}>
                   {title}
                 </Link>
               </h3>
-              <small className="blog-date"><i>{node.frontmatter.date}</i></small>
+              <small style={{color: '#aeaeae'}} className="blog-date"><i>{node.frontmatter.date}</i></small>
             </header>
             {/* <section>
               <p
