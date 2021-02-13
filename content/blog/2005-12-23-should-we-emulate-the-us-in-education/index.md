@@ -1,6 +1,7 @@
 ---
 title: "Should we emulate the US in education?"
 date: "2005-12-23"
+Head: "2005"
 ---
 
 I read this article, which quotes a [speech](http://in.rediff.com/money/2005/dec/23bspec.htm) given by NR Narayanamurthy, where he talks about what to do about India's education infrastructure.

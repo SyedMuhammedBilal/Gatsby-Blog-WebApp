@@ -69,18 +69,9 @@ const Layout = ({ location, title, children }) => {
           fontFamily: `Montserrat, sans-serif`,
         }}
       >
-        <Link
-          style={{
-            boxShadow: `none`,
-            color: `inherit`,
-          }}
-          to={`/`}
-        >
-          {title}
-        </Link>
       </h2>
     </>
-  )
+  );
 
   return (
 
@@ -96,25 +87,28 @@ const Layout = ({ location, title, children }) => {
 
       <div className="sidebar">
         <div
-<<<<<<< HEAD
-
-=======
->>>>>>> 967db3954f29ba32399ccc743afea297b94f1c26
         >
           {header}
           <div className="sidediv" >
-            <div className="toggle">
-              <ul>
-                <li onClick={() => navigate('/')}>Home</li>
-                <li> About</li>
-              </ul>
+            <div className="toggle-1">
+          
+              <h6 onClick={() => navigate('/')}>Home</h6>
+              <h6 onClick={() => navigate('/about')}> About</h6>
+      
             </div>
 
-            <div className="toggle">
+            <div className="toggle-2">
               <ul>
-                <li>2013</li>
-                <li>2012</li>
-                <li>2011</li>
+                <li onClick={() => navigate('/#2013')}>2013</li>
+                <li onClick={() => navigate('/#2012')}>2012</li>
+                <li onClick={() => navigate('/#2011')}>2011</li>
+                <li onClick={() => navigate('/#2010')}>2010</li>
+                <li onClick={() => navigate('/#2009')}>2009</li>
+                <li onClick={() => navigate('/#2008')}>2008</li>
+                <li onClick={() => navigate('/#2007')}>2007</li>
+                <li onClick={() => navigate('/#2006')}>2006</li>
+                <li onClick={() => navigate('/#2005')}>2005</li>
+                <li onClick={() => navigate('/#2004')}>2004</li>
               </ul>
             </div>
           </div>
@@ -124,15 +118,10 @@ const Layout = ({ location, title, children }) => {
 
       <div className="main-content relative">
         <main>{children}</main>
-<<<<<<< HEAD
-
-        <Footer />
-=======
         {/* <Footer /> */}
->>>>>>> 967db3954f29ba32399ccc743afea297b94f1c26
       </div>
     </div>
   )
 };
 
-export default Layout
+export default Layout;

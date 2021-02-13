@@ -9,7 +9,7 @@ import Markdown from 'markdown-to-jsx'
 import { rhythm, scale } from "../utils/typography"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
-  const post = data.markdownRemark
+  const post = data.markdownRemark;
   // const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
 
@@ -37,7 +37,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           >
             {post.frontmatter.date}
           </p>
-        </header>\
+        </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{

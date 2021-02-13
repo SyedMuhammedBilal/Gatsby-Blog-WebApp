@@ -1,11 +1,10 @@
----
-title: "About"
----
+
+<h1>About</h1>
 
 <img src="./images/scenery.jpg" alt="scenery">
 <br />
 
-Steve Brotman's [post]I’m an engineer at Stripe where I help design, build, and run our API and maintain our public-facing developer tooling.
+I’m an engineer at Stripe where I help design, build, and run our API and maintain our public-facing developer tooling.
 
 I recently spent quite a few years at Heroku where I helped create our V3 API and refine and operate its central supporting services. I’m still a strong believer that developers at every product company shouldn’t be spending too much time thinking about infrastructure, and have access to a deployment mechanism as easy as git push heroku master.
 

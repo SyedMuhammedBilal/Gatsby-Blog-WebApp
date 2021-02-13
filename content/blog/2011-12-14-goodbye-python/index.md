@@ -1,6 +1,7 @@
 ---
 title: "Goodbye Python...."
 date: "2011-12-14"
+Head: "2011"
 ---
 
 Your package management still sucks.... and languages like Clojure have set the bar that a modern language needs built in package and dependency management.

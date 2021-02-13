@@ -1,38 +1,29 @@
-import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
+import React, { useState } from 'react'
+import Marked from 'marked'
 import Layout from "../components/layout"
+import '../components/global.css'
+import image from '../data/about/images/scenery.jpg'
+import Data from '../data/about'
 
-const About = () => {
-    const data = useStaticQuery(graphql`
-        query {
-          allMarkdownRemark(filter: {id: {eq: "9e05fbf3-dc74-5d08-89ec-93dd3778a0c8"}}, limit: 1000000000) {
-            edges {
-              node {
-                frontmatter {
-                  title
-                }
-                html
-              }
-            }
-          }
-        }
-    `);
+export default function About() {
+  const [data, setData] = useState(Data)
 
-    const posts = data.allMarkdownRemark.edges;
-    return (
-        <Layout title="About">
-            {React.Children.toArray(
-                posts.map(({node}) => {
-                    return (
-                        <article>
-                            <h1> {node.frontmatter.title} </h1>
-                            <section dangerouslySetInnerHTML={{ __html: node.html }} />
-                        </article>
-                    )
-                })
-            )}
-        </Layout>
-    )
+  return (
+      <Layout title="About">
+        <article>
+            <h1>About</h1>
+            <br />
+            <img src={image} alt="avout-pic" />
+            <br />
+            {data.map((datas) => {
+              return (
+                <section key={datas.id}>
+                  <h3> {datas.title ? datas.title : null} </h3>
+                  <p> {datas.desc} </p>
+                </section>
+              )
+            })}
+        </article>
+      </Layout>
+  );
 };
-
-export default About

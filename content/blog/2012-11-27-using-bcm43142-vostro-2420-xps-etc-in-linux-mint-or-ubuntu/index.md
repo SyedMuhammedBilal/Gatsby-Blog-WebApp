@@ -1,5 +1,6 @@
 ---
 title: "Using BCM43142 (Vostro 2420, XPS, etc.) in Linux Mint or Ubuntu"
+Head: "2012"
 date: "2012-11-27"
 ---
 

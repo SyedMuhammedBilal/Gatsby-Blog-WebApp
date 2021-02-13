@@ -1,6 +1,7 @@
 ---
 title: "Death of Nokia and RIM ?"
 date: "2010-12-27"
+Head: "2010"
 ---
 
 I was reading this [editorial](http://www.asymco.com/2010/12/27/the-85-smartphone/) about a new Broadcom chip - the BCM2157. Let's see what we have here:

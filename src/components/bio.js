@@ -65,6 +65,6 @@ const Bio = () => {
       </p>
     </div>
   )
-}
+};
 
 export default Bio

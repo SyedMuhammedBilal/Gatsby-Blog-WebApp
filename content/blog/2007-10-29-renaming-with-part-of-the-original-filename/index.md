@@ -1,6 +1,7 @@
 ---
 title: "Renaming with part of the original filename"
 date: "2007-10-29"
+Head: "2007"
 categories: 
   - "linux"
   - "software"

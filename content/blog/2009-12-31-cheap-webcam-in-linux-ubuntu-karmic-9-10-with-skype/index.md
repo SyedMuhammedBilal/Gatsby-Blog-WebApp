@@ -1,6 +1,7 @@
 ---
 title: "Cheap webcam in Linux (Ubuntu Karmic 9.10) with Skype"
 date: "2009-12-31"
+Head: "2009"
 categories: 
   - "compiler"
   - "linux"

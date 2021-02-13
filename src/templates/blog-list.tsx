@@ -24,6 +24,7 @@ type Data = {
           title: string
           date: string
           description: string
+          Head: string
         }
         fields: {
           slug: string
@@ -33,34 +34,44 @@ type Data = {
   }
 };
 
+
 const BlogIndex = ({
   data,
   location,
   pageContext,
-}: PageProps<Data, PageContext>) => {
-  const siteTitle = data.allMarkdownRemark.edges.node
-  // console.log(siteTitle);
+}: PageProps<Data>) => {
+  const siteTitle = data.allMarkdownRemark.edges.node;
+  // console.log(siteTitle)
   const posts = data.allMarkdownRemark.edges
-  const { currentPage, numPages } = pageContext
+  // const { currentPage, numPages } = pageContext
 
-  const isFirst = currentPage === 1
-  const isLast = currentPage === numPages
-  const prevPage = currentPage - 1 === 1 ? "/" : `/${currentPage - 1}`
-  const nextPage = `/${currentPage + 1}`;
+  // const isFirst = currentPage === 1
+  // const isLast = currentPage === numPages
+  // const prevPage = currentPage - 1 === 1 ? "/" : `/${currentPage - 1}`
+  // const nextPage = `/${currentPage + 1}`;
+
+  // const specificSection = React.useRef<any>(null);
+
+  // var elem =  specificSection.current.offsetTop
+
+  // const gotoSection = () => {
+  //   window.scrollTo({
+  //     top: elem,
+  //     behavior: 'smooth'
+  //   })
+  // };
 
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
-<<<<<<< HEAD
-
-=======
       <h1 className="list-head">Fragments</h1>
-      <div className="fragments fragments-separator"/>
->>>>>>> 967db3954f29ba32399ccc743afea297b94f1c26
+      <div className="fragments fragments-separator" />
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
-          <article key={node.fields.slug}>
+          <React.Fragment>
+            <h2 id={node.frontmatter.Head} style={{fontFamily: 'sans-serif'}}> {node.frontmatter.Head ? node.frontmatter.Head : ''} </h2>
+          <article id={node.fields.slug} key={node.fields.slug}>
             <header>
               <h3
                 style={{
@@ -73,14 +84,15 @@ const BlogIndex = ({
               </h3>
               <small className="blog-date"><i>{node.frontmatter.date}</i></small>
             </header>
-            <section>
+            {/* <section>
               <p
                 dangerouslySetInnerHTML={{
                   __html: node.frontmatter.description || node.excerpt,
                 }}
               />
-            </section>
-          </article>
+            </section> */}
+            </article>
+          </React.Fragment>
         )
       })}
 
@@ -94,7 +106,7 @@ const BlogIndex = ({
             padding: 0,
           }}
         >
-          <li>
+          {/* <li>
             {!isFirst && (
               <Link to={prevPage} rel="prev">
                 ← Previous Page
@@ -107,7 +119,7 @@ const BlogIndex = ({
                 Next Page →
               </Link>
             )}
-          </li>
+          </li> */}
         </ul>
       </nav>
     </Layout>
@@ -117,7 +129,7 @@ const BlogIndex = ({
 export default BlogIndex
 
 export const pageQuery = graphql`
-  query blogPageQuery($skip: Int!, $limit: Int!) {
+  query blogPageQuery($skip: Int!) {
     site {
       siteMetadata {
         title
@@ -125,7 +137,6 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      limit: $limit
       skip: $skip
     ) {
       edges {
@@ -137,9 +148,10 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
+            Head
           }
         }
       }
     }
   }
-`
+`;
