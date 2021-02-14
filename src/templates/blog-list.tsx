@@ -40,26 +40,8 @@ const BlogIndex = ({
   location,
   pageContext,
 }: PageProps<Data>) => {
-  const siteTitle = data.allMarkdownRemark.edges.node;
-  // console.log(siteTitle)
+  const siteTitle = data.allMarkdownRemark.edges.node
   const posts = data.allMarkdownRemark.edges
-  // const { currentPage, numPages } = pageContext
-
-  // const isFirst = currentPage === 1
-  // const isLast = currentPage === numPages
-  // const prevPage = currentPage - 1 === 1 ? "/" : `/${currentPage - 1}`
-  // const nextPage = `/${currentPage + 1}`;
-
-  // const specificSection = React.useRef<any>(null);
-
-  // var elem =  specificSection.current.offsetTop
-
-  // const gotoSection = () => {
-  //   window.scrollTo({
-  //     top: elem,
-  //     behavior: 'smooth'
-  //   })
-  // }
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -69,7 +51,6 @@ const BlogIndex = ({
       <div className="fragments fragments-separator" />
       <br />
       <p style={{fontSize: '12px', fontWeight: '100'}}>Stream of consciousness notes that don't merit a more dedicated write-up</p>
-      {/* <a style={{fontSize: '12px', fontWeight: 100}}>Atom Feed.</a> */}
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug;
         return (
@@ -88,13 +69,6 @@ const BlogIndex = ({
                 </Link>
                 <small className="date-blogs" style={{color: '#b9b7b7', fontFamily: 'sans-serif', fontWeight: 400, textDecoration: 'none'}}><i>{node.frontmatter.date}</i></small>
               </div>
-            {/* <section>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              />
-            </section> */}
             </article>
           </React.Fragment>
         )
@@ -104,32 +78,6 @@ const BlogIndex = ({
       <h1 onClick={() => navigate('/')} className="list-head2" style={{fontSize: '14px', fontWeight: 600, letterSpacing: '-1px', cursor: 'pointer', marginLeft: '10px'}}>Fragments</h1>
       <h1 onClick={() => navigate('/about')} className="list-head2" style={{fontSize: '14px', fontWeight: 600, letterSpacing: '-1px', cursor: 'pointer', marginLeft: '10px'}}>About</h1>
       </div>
-      <nav>
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
-          {/* <li>
-            {!isFirst && (
-              <Link to={prevPage} rel="prev">
-                ← Previous Page
-              </Link>
-            )}
-          </li>
-          <li>
-            {!isLast && (
-              <Link to={nextPage} rel="next">
-                Next Page →
-              </Link>
-            )}
-          </li> */}
-        </ul>
-      </nav>
     </Layout>
   )
 }

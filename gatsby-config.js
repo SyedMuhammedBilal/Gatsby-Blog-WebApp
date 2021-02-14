@@ -94,5 +94,14 @@ module.exports = {
     `gatsby-plugin-offline`,
     "gatsby-plugin-dark-mode",
     `gatsby-plugin-postcss`,
+    {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        printRejected: true,
+        develop: true,
+        tailwind: true,
+        
+      }
+    }
   ],
 }
