@@ -10,6 +10,7 @@ import { rhythm, scale } from "../utils/typography"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark;
+  const sTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
 
   return (
@@ -18,7 +19,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <h1 onClick={() => navigate('/')} className="list-head" style={{fontSize: '14px', fontWeight: 600, letterSpacing: '-1px', cursor: 'pointer'}}>Fragments</h1>
+      <h1 onClick={() => navigate('/')} className="list-head" style={{fontSize: '14px', fontWeight: 600, letterSpacing: '-1px', cursor: 'pointer'}}> {sTitle} </h1>
       <article>
         <header>
           <h1
@@ -50,7 +51,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           }}
         />
         <footer>
-          <h1 className="list-head" style={{fontSize: '14px', fontWeight: 600, letterSpacing: '-1px'}}>Fragments</h1>
+          <h1 className="list-head" style={{fontSize: '14px', fontWeight: 600, letterSpacing: '-1px'}}> {sTitle} </h1>
           <p style={{fontSize: '12px', marginTop: '-15px'}}><i> {post.frontmatter.title} </i></p>
           <h1 className="list-head" style={{fontSize: '14px', fontWeight: 600, letterSpacing: '-1px'}}>Published</h1>
           <p style={{fontSize: '12px',  marginTop: '-15px'}}><i> {post.frontmatter.date} </i></p>

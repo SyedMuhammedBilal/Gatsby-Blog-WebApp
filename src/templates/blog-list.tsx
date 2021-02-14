@@ -40,12 +40,13 @@ const BlogIndex = ({
   pageContext,
 }: PageProps<Data>) => {
   const siteTitle = data.allMarkdownRemark.edges.node
-  const posts = data.allMarkdownRemark.edges
+  const posts = data.allMarkdownRemark.edges;
+  const sTitle = data.site.siteMetadata.title
 
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
-      <h1 className="list-head">Fragments</h1>
+      <h1 className="list-head"> {sTitle} </h1>
       <br />
       <div className="fragments fragments-separator" />
       <br />
@@ -74,7 +75,7 @@ const BlogIndex = ({
       })}
 
 <div className="post-footer">
-      <h1 onClick={() => navigate('/')} className="list-head2" style={{fontSize: '14px', fontWeight: 600, letterSpacing: '-1px', cursor: 'pointer', marginLeft: '10px'}}>Fragments</h1>
+      <h1 onClick={() => navigate('/')} className="list-head2" style={{fontSize: '14px', fontWeight: 600, letterSpacing: '-1px', cursor: 'pointer', marginLeft: '10px'}}> {sTitle} </h1>
       <h1 onClick={() => navigate('/about')} className="list-head2" style={{fontSize: '14px', fontWeight: 600, letterSpacing: '-1px', cursor: 'pointer', marginLeft: '10px'}}>About</h1>
       </div>
     </Layout>

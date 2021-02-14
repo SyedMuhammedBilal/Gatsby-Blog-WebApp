@@ -16,6 +16,7 @@ const Bio = () => {
       }
       site {
         siteMetadata {
+          title
           author {
             name
             summary
@@ -26,9 +27,10 @@ const Bio = () => {
         }
       }
     }
-  `);
+  `)
 
   const { author, social } = data.site.siteMetadata
+  const sTitle = data.site.siteMetadata.title
   return (
     <div
       style={{
@@ -50,11 +52,11 @@ const Bio = () => {
         </a>
       </p></i>
       <div className="post-footer">
-      <h1 onClick={() => navigate('/')} className="list-head2" style={{fontSize: '14px', fontWeight: 600, letterSpacing: '-1px', cursor: 'pointer', marginLeft: '10px'}}>Fragments</h1>
+      <h1 onClick={() => navigate('/')} className="list-head2" style={{fontSize: '14px', fontWeight: 600, letterSpacing: '-1px', cursor: 'pointer', marginLeft: '10px'}}> {sTitle} </h1>
       <h1 onClick={() => navigate('/about')} className="list-head2" style={{fontSize: '14px', fontWeight: 600, letterSpacing: '-1px', cursor: 'pointer', marginLeft: '10px'}}>About</h1>
       </div>
     </div>
-  )
+  );
 };
 
 export default Bio;
