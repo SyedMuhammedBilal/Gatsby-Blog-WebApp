@@ -1,6 +1,6 @@
 // Gatsby supports TypeScript natively!
 import React from "react";
-import { PageProps, Link, graphql } from "gatsby"
+import { PageProps, Link, graphql, navigate } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
@@ -32,8 +32,7 @@ type Data = {
       }
     }[]
   }
-};
-
+}
 
 const BlogIndex = ({
   data,
@@ -80,7 +79,7 @@ const BlogIndex = ({
       </div>
     </Layout>
   )
-}
+};
 
 export default BlogIndex
 
