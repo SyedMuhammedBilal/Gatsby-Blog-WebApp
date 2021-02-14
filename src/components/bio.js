@@ -6,7 +6,7 @@
  */
 
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, navigate } from "gatsby"
 import Image from "gatsby-image"
 
 import { rhythm } from "../utils/typography";
@@ -39,32 +39,29 @@ const Bio = () => {
   return (
     <div
       style={{
-        display: `flex`,
         marginBottom: rhythm(2.5),
       }}
     >
-      <Image
-        fixed={data.avatar.childImageSharp.fixed}
-        alt={author.name}
-        style={{
-          marginRight: rhythm(1 / 2),
-          marginBottom: 0,
-          minWidth: 50,
-          borderRadius: `100%`,
-        }}
-        imgStyle={{
-          borderRadius: `50%`,
-        }}
-      />
-      <p>
-        Written by <strong>{author.name}</strong> {author.summary}
+      <i><p style={{fontSize: '12px'}}>
+        Find me on Twitter
         {` `}
         <a href={`https://twitter.com/${social.twitter}`}>
-          You should follow him on Twitter
+          @Brandur
         </a>
-      </p>
+      </p></i>
+      <i><p style={{fontSize: '12px'}}>
+        Did i make any mistake? Please consider 
+        {` `}
+        <a href={`https://twitter.com/${social.twitter}`}>
+           sending a pull request.
+        </a>
+      </p></i>
+      <div className="post-footer">
+      <h1 onClick={() => navigate('/')} className="list-head2" style={{fontSize: '14px', fontWeight: 600, letterSpacing: '-1px', cursor: 'pointer', marginLeft: '10px'}}>Fragments</h1>
+      <h1 onClick={() => navigate('/about')} className="list-head2" style={{fontSize: '14px', fontWeight: 600, letterSpacing: '-1px', cursor: 'pointer', marginLeft: '10px'}}>About</h1>
+      </div>
     </div>
   )
 };
 
-export default Bio
+export default Bio;

@@ -109,11 +109,49 @@ blockquote {
   font-size: 55px;
   font-weight: 400;
 }
+.post-footer {
+  display: flex;
+  margin-top: -30px;
+  margin-left: -12px;
+}
+.list-head2 {
+  font-size: 55px;
+  font-weight: 400;
+}
+.list-head2 h1 {
+  margin-left: 4px;
+}
 
 @media (min-width: 200px) and (max-width: 500px) {
   .list-head {
     font-size: 40px;
     letter-spacing: -3px;
+  }
+  .list-head2 {
+    font-size: 40px;
+    letter-spacing: -3px;
+  }
+}
+
+.blog-links {
+  font-size: 14.5px;
+  line-height: 17px;
+  text-decoration: underline;
+}
+
+.date-blogs {
+  font-size: 10px;
+  margin-left: 7px;
+}
+
+@media (min-width: 200px) and (max-width: 500px) {
+  .date-blogs {
+    margin-left: 4px;
+    font-size: 9px
+  }
+
+  .blog-links {
+    font-size: 12px;
   }
 }
 

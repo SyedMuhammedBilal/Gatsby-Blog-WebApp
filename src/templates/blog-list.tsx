@@ -65,29 +65,29 @@ const BlogIndex = ({
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
       <h1 className="list-head">Fragments</h1>
+      <br />
       <div className="fragments fragments-separator" />
       <br />
       <p style={{fontSize: '12px', fontWeight: '100'}}>Stream of consciousness notes that don't merit a more dedicated write-up</p>
       {/* <a style={{fontSize: '12px', fontWeight: 100}}>Atom Feed.</a> */}
       {posts.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug
+        const title = node.frontmatter.title || node.fields.slug;
         return (
           <React.Fragment>
-            <h2 id={node.frontmatter.Head} style={{fontFamily: 'sans-serif',marginBottom: '60px'}}> {node.frontmatter.Head ? node.frontmatter.Head : ''} </h2>
+            <h4 id={node.frontmatter.Head} style={{fontFamily: 'sans-serif',marginBottom: '60px', letterSpacing: '0px'}}> {node.frontmatter.Head ? node.frontmatter.Head : ''} </h4>
           <article id={node.fields.slug} key={node.fields.slug}>
-            <header>
-              <h3
+
+              <div
                 style={{
-                    marginBottom: rhythm(1 / 4),
-                  marginTop: '-46px'
+                  marginTop: '-50px',
+
                 }}
               >
-                <Link style={{ boxShadow: `none`, fontWeight: 300, textDecoration: 'underline', fontSize: '21px' }} to={node.fields.slug}>
+                <Link className="blog-links" style={{ boxShadow: `none`, fontWeight: 300, }} to={node.fields.slug}>
                   {title}
                 </Link>
-              </h3>
-              <small style={{color: '#aeaeae'}} className="blog-date"><i>{node.frontmatter.date}</i></small>
-            </header>
+                <small className="date-blogs" style={{color: '#b9b7b7', fontFamily: 'sans-serif', fontWeight: 400, textDecoration: 'none'}}><i>{node.frontmatter.date}</i></small>
+              </div>
             {/* <section>
               <p
                 dangerouslySetInnerHTML={{
@@ -98,7 +98,7 @@ const BlogIndex = ({
             </article>
           </React.Fragment>
         )
-      })}
+      })};
 
       <nav>
         <ul

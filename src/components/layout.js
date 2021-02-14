@@ -71,7 +71,7 @@ const Layout = ({ location, title, children }) => {
       >
       </h2>
     </>
-  );
+  )
 
   return (
 
@@ -82,8 +82,6 @@ const Layout = ({ location, title, children }) => {
         transition: "color 0.2s ease-out, background 0.2s ease-out",
       }}
     >
-
-
 
       <div className="sidebar">
         <div

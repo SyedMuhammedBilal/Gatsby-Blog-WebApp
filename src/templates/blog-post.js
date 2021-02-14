@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { Link, graphql, navigate } from "gatsby"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -19,7 +19,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <h1 className="list-head" style={{fontSize: '14px', fontWeight: 600, letterSpacing: '-1px'}}>Fragments</h1>
+      <h1 onClick={() => navigate('/')} className="list-head" style={{fontSize: '14px', fontWeight: 600, letterSpacing: '-1px', cursor: 'pointer'}}>Fragments</h1>
       <article>
         <header>
           <h1
@@ -44,18 +44,22 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             {/* {post.frontmatter.date} */}
           </p>
         </header>
-        <section dangerouslySetInnerHTML={{ __html: post.html }} />
+        <section style={{fontWeight: 200}} dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{
             marginBottom: rhythm(1),
           }}
         />
         <footer>
-          {/* <Bio /> */}
+          <h1 className="list-head" style={{fontSize: '14px', fontWeight: 600, letterSpacing: '-1px'}}>Fragments</h1>
+          <p style={{fontSize: '12px', marginTop: '-15px'}}><i> {post.frontmatter.title} </i></p>
+          <h1 className="list-head" style={{fontSize: '14px', fontWeight: 600, letterSpacing: '-1px'}}>Published</h1>
+          <p style={{fontSize: '12px',  marginTop: '-15px'}}><i> {post.frontmatter.date} </i></p>
+          <Bio />
         </footer>
       </article>
 
-      <nav>
+      {/* <nav>
         <ul
           style={{
             display: `flex`,
@@ -80,7 +84,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             )}
           </li>
         </ul>
-      </nav>
+      </nav> */}
     </Layout>
   )
 }
