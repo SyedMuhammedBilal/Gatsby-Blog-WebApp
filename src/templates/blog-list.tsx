@@ -98,8 +98,12 @@ const BlogIndex = ({
             </article>
           </React.Fragment>
         )
-      })};
+      })}
 
+<div className="post-footer">
+      <h1 onClick={() => navigate('/')} className="list-head2" style={{fontSize: '14px', fontWeight: 600, letterSpacing: '-1px', cursor: 'pointer', marginLeft: '10px'}}>Fragments</h1>
+      <h1 onClick={() => navigate('/about')} className="list-head2" style={{fontSize: '14px', fontWeight: 600, letterSpacing: '-1px', cursor: 'pointer', marginLeft: '10px'}}>About</h1>
+      </div>
       <nav>
         <ul
           style={{
