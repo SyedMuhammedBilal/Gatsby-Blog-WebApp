@@ -19,8 +19,8 @@ export default function About() {
             {data.map((datas) => {
               return (
                 <section key={datas.id}>
-                  <h3> {datas.title ? datas.title : null} </h3>
-                  <p> {datas.desc} </p>
+                  <h3 style={{fontFamily: 'sans-serif'}}> {datas.title ? datas.title : null} </h3>
+                  <p style={{fontSize: '14px', fontWeight: 100, letterSpacing: '0.5px', wordSpacing: '2px'}}> {datas.desc} </p>
                 </section>
               )
             })}
